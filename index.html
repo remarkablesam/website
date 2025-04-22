@@ -185,10 +185,21 @@
     <span class="material-symbols-rounded nav-icon">admin_panel_settings</span>
     <span class="nav-label">Switch View</span>
   </div>
-  <div class="nav-item">
-    <span class="material-symbols-rounded nav-icon">logout</span>
-    <span class="nav-label">Logout</span>
-  </div>
+<div class="nav-item" onclick="logout()">
+  <span class="material-symbols-rounded nav-icon">logout</span>
+  <span class="nav-label">Logout</span>
+</div>
+
+<script>
+  function logout() {
+    // Clear login status from localStorage
+    localStorage.removeItem("loggedIn");
+    
+    // Redirect to the login page
+    window.location.href = "login.html"; // Adjust to your login page URL
+  }
+</script>
+
 </aside>
 
 <main>
